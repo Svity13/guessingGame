@@ -18,8 +18,36 @@ def gameEasy():
         if guess == r1:
             print("Congrats you got it right!")
             break
-        else:
-            print("Try again")
+        elif guess > r1:
+            print(f"Incorrect! The number is less than {guess}")
+        elif guess < r1:
+            print(f"Incorrect! The number is more than {guess}")
+    print(f"The number was {r1}")
+
+def gameMed():
+    r1 = random.randint(0, 50)
+    for i in range(5):
+        guess = int(input("Enter your guess: "))
+        if guess == r1:
+            print("Congrats you got it right!")
+            break
+        elif guess > r1:
+            print(f"Incorrect! The number is less than {guess}")
+        elif guess < r1:
+            print(f"Incorrect! The number is more than {guess}")
+    print(f"The number was {r1}")
+
+def gameHard():
+    r1 = random.randint(0, 50)
+    for i in range(3):
+        guess = int(input("Enter your guess: "))
+        if guess == r1:
+            print("Congrats you got it right!")
+            break
+        elif guess > r1:
+            print(f"Incorrect! The number is less than {guess}")
+        elif guess < r1:
+            print(f"Incorrect! The number is more than {guess}")
     print(f"The number was {r1}")
 
 mainMenu()
